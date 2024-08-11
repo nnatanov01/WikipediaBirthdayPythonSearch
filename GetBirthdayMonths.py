@@ -16,7 +16,7 @@ def GetIndexOfMonth (birthdatedata) :
 
 
 result = wikipedia.search("serial killer",results = 100000)#100000
-massiveString = '';
+month = '';
 skippedCounter = 0
 for x in result:
     try:
@@ -42,8 +42,8 @@ for x in result:
         print(birth_month)
         if (int(str(birth_month)) > 12) : 
             skippedCounter += 1; continue
-        massiveString += '(' + str(birth_month) + ')'
+        month += '(' + str(birth_month) + ')'
     except: skippedCounter = skippedCounter + 1; continue
 
-print (massiveString)
+print (month)
 print ('skipped because of lack of data or poor structure ' + str(skippedCounter))
